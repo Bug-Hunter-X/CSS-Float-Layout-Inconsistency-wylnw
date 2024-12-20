@@ -1,0 +1,10 @@
+The following CSS rule can lead to unexpected behavior in some browsers:
+
+```css
+div {
+  width: 50%;
+  float: left;
+}
+```
+
+The issue arises when multiple `div` elements are placed in a container without specifying the container's width.  Browsers may handle the implicit widths differently, leading to unexpected layout discrepancies or overflow.
