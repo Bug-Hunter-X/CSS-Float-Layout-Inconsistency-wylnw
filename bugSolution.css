@@ -1,0 +1,17 @@
+To resolve the layout inconsistency, explicitly define the container's width.  If the container's width should adapt to its contents, use techniques like flexbox or inline-block. 
+
+Here's an example using flexbox:
+
+```css
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div {
+  width: 50%;
+  box-sizing: border-box; /* Fix for padding and border inclusion in width */
+}
+```
+
+This approach allows the elements to share the available width without overflow issues.  The `box-sizing: border-box` property ensures that padding and border are included within the element's width calculation, preventing unexpected sizing.
